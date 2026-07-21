@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="color-scheme" content="light dark" />
+<meta name="theme-color" content="#EDEFF2" id="themeColorMeta" />
+<title>Parazzini's Custom Homemenu</title>
+<meta name="description" content="A full custom Home Menu for the Nintendo 3DS: new animations, a decluttered HUD, and a grey-and-white redesign, installed over LayeredFS." />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%23161a20'/%3E%3Crect x='20' y='16' width='60' height='30' rx='6' fill='%23edeff2'/%3E%3Crect x='26' y='52' width='48' height='34' rx='6' fill='%23edeff2'/%3E%3Ccircle cx='50' cy='69' r='5' fill='%231b54f0'/%3E%3C/svg%3E" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav id="nav">
+  <div class="nav-inner">
+    <a href="#top" class="brand"><span class="brand-mark"></span>3DS Home Menu</a>
+    <div class="nav-links" id="navLinks">
+      <a href="#top">Overview</a>
+      <a href="#screenshots">Screenshots</a>
+      <a href="#changes">What's changed</a>
+      <a href="#install">Install</a>
+      <a href="#remove">Remove</a>
+      <a href="#credits">Credits</a>
+    </div>
+    <button class="theme-toggle" id="themeToggle" type="button" aria-pressed="false" aria-label="Switch to dark mode">
+      <svg class="icon-moon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3a9 9 0 1 0 9 9 7 7 0 0 1-9-9Z"/></svg>
+      <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+        <circle cx="12" cy="12" r="4.3"/>
+        <line x1="12" y1="2.5" x2="12" y2="5"/><line x1="12" y1="19" x2="12" y2="21.5"/>
+        <line x1="2.5" y1="12" x2="5" y2="12"/><line x1="19" y1="12" x2="21.5" y2="12"/>
+        <line x1="5.1" y1="5.1" x2="6.8" y2="6.8"/><line x1="17.2" y1="17.2" x2="18.9" y2="18.9"/>
+        <line x1="5.1" y1="18.9" x2="6.8" y2="17.2"/><line x1="17.2" y1="6.8" x2="18.9" y2="5.1"/>
+      </svg>
+    </button>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <a class="nav-cta" href="https://github.com/parazzini/Custom-Homemenu-3DS/releases" target="_blank" rel="noopener">Download</a>
+  </div>
+</nav>
+
+<header id="top" class="hero">
+  <div class="hero-inner">
+    <div class="hero-copy">
+      <p class="eyebrow">Custom Home Menu · 3DS MOD</p>
+      <h1>Parazzini's Custom<br/>Home Menu</h1>
+      <p class="lede">My custom Home Menu for the Nintendo 3DS - custom animations, HUD, icons and a grey & white redesign. Installed over LayeredFS, the console's files are never touched and you can remove it without any issue.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="https://github.com/parazzini/Custom-Homemenu-3DS/releases" target="_blank" rel="noopener">Download from GitHub</a>
+        <a class="btn btn-ghost" href="https://3ds.codeberg.page/homemenu/" target="_blank" rel="noopener">Home Menu customisation guide</a>
+      </div>
+      <dl class="spec-strip">
+        <div><dt>Support</dt><dd>Old/New 3DS · 2DS</dd></div>
+        <div><dt>Regions</dt><dd>EUR · USA · JPN</dd></div>
+        <div><dt>Firmware</dt><dd class="mono">11.17.0-50</dd></div>
+      </dl>
+    </div>
+
+    <div class="hero-device">
+      <div class="device">
+        <div class="top-deco" aria-hidden="true">
+          <span class="shoulder"></span>
+          <span class="cam-cluster"><span class="cam-dot"></span><span class="led-dot"></span></span>
+          <span class="shoulder"></span>
+        </div>
+
+        <div class="screen screen-top">
+          <img src="https://raw.githubusercontent.com/parazzini/Custom-Homemenu-3DS/main/gif/top.GIF"
+               data-fallback="https://github.com/parazzini/Custom-Homemenu-3DS/blob/main/gif/top.GIF?raw=true"
+               alt="Top screen preview of the custom Home Menu in action" loading="lazy"/>
+        </div>
+
+        <div class="top-foot" aria-hidden="true">
+          <span class="speaker-grille"></span>
+          <span class="speaker-grille"></span>
+        </div>
+
+        <div class="hinge"></div>
+
+        <div class="bottom-row">
+          <svg class="pad-cluster" viewBox="0 0 44 108" aria-hidden="true">
+            <circle class="pad-main" cx="22" cy="26" r="15"/>
+            <circle class="pad-dim" cx="22" cy="26" r="6"/>
+            <rect class="pad-main" x="9" y="72" width="26" height="10" rx="2.5"/>
+            <rect class="pad-main" x="17" y="64" width="10" height="26" rx="2.5"/>
+          </svg>
+
+          <div class="screen screen-bottom">
+            <img src="https://raw.githubusercontent.com/parazzini/Custom-Homemenu-3DS/main/gif/bottom.GIF"
+                 data-fallback="https://github.com/parazzini/Custom-Homemenu-3DS/blob/main/gif/bottom.GIF?raw=true"
+                 alt="Bottom screen preview of the custom Home Menu in action" loading="lazy"/>
+          </div>
+
+          <svg class="pad-cluster" viewBox="0 0 44 108" aria-hidden="true">
+            <circle class="pad-main" cx="22" cy="22" r="7.5"/>
+            <circle class="pad-main" cx="8" cy="36" r="7.5"/>
+            <circle class="pad-main" cx="36" cy="36" r="7.5"/>
+            <circle class="pad-main" cx="22" cy="50" r="7.5"/>
+          </svg>
+        </div>
+
+        <div class="bottom-foot" aria-hidden="true">
+          <span class="pill-btn">select</span>
+          <span class="home-dot"></span>
+          <span class="pill-btn">start</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <section id="screenshots" class="section">
+    <div class="wrap">
+      <p class="eyebrow">Screenshots</p>
+      <div class="section-head"><h2>See it running</h2></div>
+      <div class="shot-grid">
+
+        <figure class="shot">
+          <div class="shot-img-wrap">
+            <img src="https://raw.githubusercontent.com/parazzini/Custom-Homemenu-3DS/main/docs/screenshot/sleeptop.png"
+                 data-fallback="https://github.com/parazzini/Custom-Homemenu-3DS/blob/main/docs/screenshot/sleeptop.png?raw=true"
+                 alt="Sleep mode, top screen" loading="lazy"/>
+          </div>
+          <figcaption>Sleep mode — top screen</figcaption>
+        </figure>
+
+        <figure class="shot">
+          <div class="shot-img-wrap">
+            <img src="https://raw.githubusercontent.com/parazzini/Custom-Homemenu-3DS/main/docs/screenshot/sleepbot.png"
+                 data-fallback="https://github.com/parazzini/Custom-Homemenu-3DS/blob/main/docs/screenshot/sleepbot.png?raw=true"
+                 alt="Sleep mode, bottom screen" loading="lazy"/>
+          </div>
+          <figcaption>Sleep mode — bottom screen</figcaption>
+        </figure>
+
+        <figure class="shot">
+          <div class="shot-img-wrap">
+            <img src="https://raw.githubusercontent.com/parazzini/Custom-Homemenu-3DS/main/docs/screenshot/changing.png"
+                 data-fallback="https://github.com/parazzini/Custom-Homemenu-3DS/blob/main/docs/screenshot/changing.png?raw=true"
+                 alt="Software transition animation" loading="lazy"/>
+          </div>
+          <figcaption>Switching software</figcaption>
+        </figure>
+
+        <figure class="shot">
+          <div class="shot-img-wrap">
+            <img src="https://raw.githubusercontent.com/parazzini/Custom-Homemenu-3DS/main/docs/screenshot/closingsoftware.png"
+                 data-fallback="https://github.com/parazzini/Custom-Homemenu-3DS/blob/main/docs/screenshot/closingsoftware.png?raw=true"
+                 alt="Closing software animation" loading="lazy"/>
+          </div>
+          <figcaption>Closing software</figcaption>
+        </figure>
+
+        <figure class="shot">
+          <div class="shot-img-wrap">
+            <img src="https://raw.githubusercontent.com/parazzini/Custom-Homemenu-3DS/main/docs/screenshot/folder.png"
+                 data-fallback="https://github.com/parazzini/Custom-Homemenu-3DS/blob/main/docs/screenshot/folder.png?raw=true"
+                 alt="Folder view" loading="lazy"/>
+          </div>
+          <figcaption>Folder view</figcaption>
+        </figure>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="changes" class="section">
+    <div class="wrap">
+      <p class="eyebrow">What's changed</p>
+      <div class="section-head"><h2>Every edit, grouped by system</h2></div>
+      <div class="feature-grid">
+        <article class="feature-card">
+          <h3>Animations</h3>
+          <ul class="checklist">
+            <li>Spinning cursor animation</li>
+            <li>Opening folder animation</li>
+            <li>Sleep mode screen animation</li>
+            <li>Opening/closing software animations</li>
+          </ul>
+        </article>
+        <article class="feature-card">
+          <h3>HUD</h3>
+          <ul class="checklist">
+            <li>Clock moved to top-centre of the top screen</li>
+            <li>Y and L+R indicators removed</li>
+            <li>Connection bar and its texts removed — leaving signal indicator</li>
+            <li>Play Coins count and step count removed</li>
+          </ul>
+        </article>
+        <article class="feature-card">
+          <h3>Colour scheme</h3>
+          <ul class="checklist">
+            <li>White cursor</li>
+            <li>Grey HUD — battery, clock, connection &amp; signal icons</li>
+            <li>Grey applet icons</li>
+            <li>Grey shutdown screen</li>
+            <li>Grey scroll indicator</li>
+          </ul>
+        </article>
+        <article class="feature-card">
+          <h3>Bottom screen</h3>
+          <ul class="checklist">
+            <li>Rresize-apps indicator moved to the left</li>
+            <li>Arrows background removed</li>
+            <li>Miiverse applet icon removed with skip functionality (optional)</li>
+            <li>Added windows transparency</li>
+          </ul>
+        </article>
+        <article class="feature-card">
+          <h3>Sleep screen</h3>
+          <ul class="checklist">
+            <li>Large button in the middle</li>
+            <li>Custom text</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="install" class="section">
+    <div class="wrap">
+      <p class="eyebrow">How to install</p>
+      <div class="section-head"><h2>Installation guide</h2></div>
+      <div class="callout callout-blue">
+        <p><strong>How it works —</strong> this mod is installed with LayeredFS, a Luma3DS feature that displays the files from the SD card instead of your console, you can remove it at any time without issues</p>
+      </div>
+
+      <h3 class="sub">Prerequisites</h3>
+      <ul class="plain-list">
+        <li>Luma3DS custom firmware <strong>10.3</strong> or newer — <a href="https://github.com/LumaTeam/Luma3DS" target="_blank" rel="noopener">install or upgrade it here</a></li>
+        <li>Luma's game patching enabled: boot the console holding <strong>SELECT</strong> to open the Luma3DS configuration, tick <strong>"Enable game patching"</strong>, then press <strong>START</strong> to save and exit</li>
+      </ul>
+
+      <h3 class="sub">Download</h3>
+      <ol class="steps">
+        <li>Download your preferred archive from the <a href="https://github.com/parazzini/Custom-Homemenu-3DS/releases" target="_blank" rel="noopener">releases page</a> and unzip it</li>
+        <li>Pick the archive for your console's region, then copy its <code>luma</code> folder to the root of your SD card</li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="extras" class="section">
+    <div class="wrap">
+      <p class="eyebrow">Extra content</p>
+      <div class="section-head"><h2>Add theme &amp; badges</h2></div>
+      <div class="extras-grid">
+        <article class="card">
+          <h3>Theme</h3>
+          <p>Matching Home Menu elements and cursor colour. Copy the <code>Themes</code> folder to the root of your SD card, then install it with Anemone3DS.</p>
+          <a class="link-arrow" href="https://3ds.eiphax.tech/themes" target="_blank" rel="noopener">Installation tutorial →</a>
+        </article>
+        <article class="card">
+          <h3>Badges</h3>
+          <p>A matching badge set for the Home Menu. Copy the <code>badges</code> folder to the root of your SD card, then install them with GYTB.</p>
+          <a class="link-arrow" href="https://wiki.hacks.guide/wiki/3DS:GYTB" target="_blank" rel="noopener">Installation tutorial →</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="remove" class="section">
+    <div class="wrap">
+      <p class="eyebrow red">How to remove it</p>
+      <div class="section-head"><h2>Uninstall</h2></div>
+      <ol class="steps danger">
+        <li>Boot the console holding <strong>START</strong> to launch GodMode9</li>
+        <li>Navigate to the path<code>SDCARD:/luma/titles</code></li>
+        <li>Delete the folder based on your region:</li>
+      </ol>
+      <table class="id-table">
+        <thead><tr><th>Region</th><th>Title ID</th><th></th></tr></thead>
+        <tbody>
+          <tr><td>EUR</td><td class="mono">0004003000009802</td><td><button class="copy-btn" data-copy="0004003000009802">Copy</button></td></tr>
+          <tr><td>JPN</td><td class="mono">0004003000008202</td><td><button class="copy-btn" data-copy="0004003000008202">Copy</button></td></tr>
+          <tr><td>USA</td><td class="mono">0004003000008F02</td><td><button class="copy-btn" data-copy="0004003000008F02">Copy</button></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="more-mods" class="section">
+    <div class="wrap">
+      <p class="eyebrow">Extra content</p>
+      <div class="section-head"><h2>Home Menu Mods made by other people</h2></div>
+      <div class="link-grid">
+        <a class="link-card" href="https://github.com/R-YaTian/3ds-battery-patches" target="_blank" rel="noopener">
+          <div class="lc-title">R-YaTian's 3DS Battery Patch<span>↗</span></div>
+          <div class="lc-desc">Show the battery percentage in the status bar and display each bar as 25% of battery charge</div>
+        </a>
+        <a class="link-card" href="https://www.youtube.com/watch?v=jSDKwLYfmHg" target="_blank" rel="noopener">
+          <div class="lc-title">Kitsune's Spinning Cursor <span>↗</span></div>
+          <div class="lc-desc">The cursor animation this mod's spinning cursor builds on. Watch the tutorial on YouTube.</div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="credits" class="section">
+    <div class="wrap">
+      <p class="eyebrow">Credits</p>
+      <div class="section-head"><h2>Credits go to</h2></div>
+
+      <div class="credits-group">
+        <h3 class="sub">Custom Home Menu</h3>
+        <div class="chip-row">
+          <a class="chip" href="https://aromakitsune.github.io/3DS-Custom-Home-Menu-UI" target="_blank" rel="noopener">Kitsune's Custom Home Menu</a>
+          <a class="chip" href="https://github.com/cooolgamer/Custom-Homemenu-3DS" target="_blank" rel="noopener">Coolgamer's Custom Home Menu</a>
+        </div>
+      </div>
+
+      <div class="credits-group">
+        <h3 class="sub">Theme</h3>
+        <div class="chip-row">
+          <a class="chip" href="https://themeplaza.art/item/99258" target="_blank" rel="noopener">fwdrxyyìs's Theme</a>
+        </div>
+      </div>
+
+      <div class="credits-group">
+        <h3 class="sub">Badges</h3>
+        <div class="chip-row">
+          <a class="chip" href="https://themeplaza.art/item/85956" target="_blank" rel="noopener">Eboi47</a>
+          <a class="chip" href="https://themeplaza.art/item/61176" target="_blank" rel="noopener">Jushua</a>
+          <a class="chip" href="https://themeplaza.art/item/97917" target="_blank" rel="noopener">ennchanted</a>
+          <a class="chip" href="https://themeplaza.art/item/88211" target="_blank" rel="noopener">litkud</a>
+          <a class="chip" href="https://themeplaza.art/item/96632" target="_blank" rel="noopener">ditadelrey</a>
+          <a class="chip" href="https://themeplaza.art/item/92355" target="_blank" rel="noopener">ch3m1cal</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <p>Adapted from the project's README. <a href="https://github.com/parazzini/Custom-Homemenu-3DS" target="_blank" rel="noopener">View the source on GitHub →</a></p>
+</footer>
+
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" id="lightboxClose" aria-label="Close">×</button>
+  <img id="lightboxImg" src="" alt="" />
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
