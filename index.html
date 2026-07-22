@@ -17,16 +17,9 @@
 
 <nav id="nav">
   <div class="nav-inner">
-    <a href="#top" class="brand"><span class="brand-mark"></span>3DS Home Menu</a>
-    <div class="nav-links" id="navLinks">
-      <a href="#top">Overview</a>
-      <a href="#screenshots">Screenshots</a>
-      <a href="#changes">What's changed</a>
-      <a href="#install">Install</a>
-      <a href="#remove">Remove</a>
-      <a href="#credits">Credits</a>
-    </div>
-    <button class="theme-toggle" id="themeToggle" type="button" aria-pressed="false" aria-label="Switch to dark mode">
+    <a href="#top" class="brand"><span class="brand-mark"></span><span class="brand-text">3DS Home Menu</span></a>
+    <div class="nav-actions">
+      <button class="theme-toggle" id="themeToggle" type="button" aria-pressed="false" aria-label="Switch to dark mode">
       <svg class="icon-moon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3a9 9 0 1 0 9 9 7 7 0 0 1-9-9Z"/></svg>
       <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
         <circle cx="12" cy="12" r="4.3"/>
@@ -36,10 +29,8 @@
         <line x1="5.1" y1="18.9" x2="6.8" y2="17.2"/><line x1="17.2" y1="6.8" x2="18.9" y2="5.1"/>
       </svg>
     </button>
-    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
-    <a class="nav-cta" href="https://github.com/parazzini/Custom-Homemenu-3DS/releases" target="_blank" rel="noopener">Download</a>
+      <a class="nav-cta" href="#install">Download</a>
+    </div>
   </div>
 </nav>
 
@@ -50,7 +41,7 @@
       <h1>Parazzini's Custom<br/>Home Menu</h1>
       <p class="lede">My custom Home Menu for the Nintendo 3DS - custom animations, HUD, icons and a grey & white redesign. Installed over LayeredFS, the console's files are never touched and you can remove it without any issue.</p>
       <div class="hero-actions">
-        <a class="btn btn-primary" href="https://github.com/parazzini/Custom-Homemenu-3DS/releases" target="_blank" rel="noopener">Download from GitHub</a>
+        <a class="btn btn-primary" href="#install">Download</a>
         <a class="btn btn-ghost" href="https://3ds.codeberg.page/homemenu/" target="_blank" rel="noopener">Home Menu customisation guide</a>
       </div>
       <dl class="spec-strip">
@@ -112,6 +103,25 @@
     </div>
   </div>
 </header>
+
+<div class="wrap toc-wrap">
+  <details class="toc">
+    <summary>
+      <span>Click to expand menu</span>
+      <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+    </summary>
+    <nav class="toc-links" id="tocLinks">
+      <a href="#top">Overview</a>
+      <a href="#screenshots">Screenshots</a>
+      <a href="#changes">What's changed</a>
+      <a href="#install">How to install</a>
+      <a href="#extras">Additional features</a>
+      <a href="#remove">How to remove it</a>
+      <a href="#more-mods">Extra content</a>
+      <a href="#credits">Credits</a>
+    </nav>
+  </details>
+</div>
 
 <main>
 
@@ -239,15 +249,33 @@
 
       <h3 class="sub">Download</h3>
       <ol class="steps">
-        <li>Download your preferred archive from the <a href="https://github.com/parazzini/Custom-Homemenu-3DS/releases" target="_blank" rel="noopener">releases page</a> and unzip it</li>
-        <li>Pick the archive for your console's region, then copy its <code>luma</code> folder to the root of your SD card</li>
+        <li>Download your preferred archive from below and uncompress it</li>
+        <li>Choose your console region and copy/paste the <code>luma</code> folder in the root of your SD card</li>
       </ol>
+      <div class="download-card">
+        <div class="dl-tabs" role="tablist">
+          <button class="dl-tab active" type="button" role="tab" aria-selected="true" data-target="dl-default">Variant 1: Default</button>
+          <button class="dl-tab" type="button" role="tab" aria-selected="false" data-target="dl-no-miiverse">Variant 2: No Miiverse Applet</button>
+        </div>
+        <div class="dl-panel active" id="dl-default">
+          <a class="dl-button" href="downloads/Parazzini's_Custom_Homemenu_Miiverse.zip" download>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M5 21h14"/></svg>
+            LayeredFS for 3DS console or Azahar Emulator
+          </a>
+        </div>
+        <div class="dl-panel" id="dl-no-miiverse">
+          <a class="dl-button" href="downloads/Parazzini's_Custom_Homemenu_NoMiiverse.zip" download>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M5 21h14"/></svg>
+            LayeredFS for 3DS console or Azahar Emulator
+          </a>
+        </div>
+      </div>
     </div>
   </section>
 
   <section id="extras" class="section">
     <div class="wrap">
-      <p class="eyebrow">Extra content</p>
+      <p class="eyebrow">Additional features</p>
       <div class="section-head"><h2>Add theme &amp; badges</h2></div>
       <div class="extras-grid">
         <article class="card">

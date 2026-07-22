@@ -1,30 +1,21 @@
-/* ---------- mobile nav toggle ---------- */
-const navToggle = document.getElementById('navToggle');
-const navLinks = document.getElementById('navLinks');
-navToggle.addEventListener('click', () => {
-  const open = navLinks.classList.toggle('open');
-  navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+/* ---------- download widget tabs ---------- */
+document.querySelectorAll('.dl-tab').forEach(tab => {
+  tab.addEventListener('click', () => {
+    document.querySelectorAll('.dl-tab').forEach(t => { t.classList.remove('active'); t.setAttribute('aria-selected', 'false'); });
+    document.querySelectorAll('.dl-panel').forEach(p => p.classList.remove('active'));
+    tab.classList.add('active');
+    tab.setAttribute('aria-selected', 'true');
+    document.getElementById(tab.dataset.target).classList.add('active');
+  });
 });
-navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
-  navLinks.classList.remove('open');
-  navToggle.setAttribute('aria-expanded', 'false');
-}));
 
-/* ---------- active nav-link highlight on scroll ---------- */
-const sections = document.querySelectorAll('main .section, .hero');
-const navA = document.querySelectorAll('.nav-links a');
-const byHref = id => document.querySelector('.nav-links a[href="#' + id + '"]');
-if ('IntersectionObserver' in window) {
-  const obs = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        navA.forEach(a => a.classList.remove('active'));
-        const link = byHref(entry.target.id);
-        if (link) link.classList.add('active');
-      }
-    });
-  }, { rootMargin: '-45% 0px -50% 0px' });
-  sections.forEach(s => { if (s.id) obs.observe(s); });
+/* ---------- section menu: close it after a link is clicked ---------- */
+const tocDetails = document.querySelector('.toc');
+const tocLinks = document.getElementById('tocLinks');
+if (tocDetails && tocLinks) {
+  tocLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    tocDetails.removeAttribute('open');
+  }));
 }
 
 /* ---------- lightbox ---------- */
